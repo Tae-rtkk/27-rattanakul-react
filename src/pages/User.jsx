@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // รับ state tasks เข้ามาผ่าน props 
 const User = ({ tasks }) => {
@@ -9,10 +9,9 @@ const User = ({ tasks }) => {
             <h1 className='text-5xl font-bold'>Home - User Sector</h1>
 
             <div className='mt-20'>
-                {/* Link 2 ตัว ให้ตรงกะ path ที่ตั้งไว้ด้วยนะจ๊ะ ละก็ใส่ Outlet เข้าไปเพราะพวกนี้เป็นลูกๆ ของหน้า User */}
+                {/* Link 2 ตัว ให้ตรงกะ path ที่ตั้งไว้ด้วยนะจ๊ะ */}
                 <Link to='/user' className='p-3 bg-white rounded-md mx-12 text-base font-bold shadow-md'>User Home Sector</Link>
                 <Link to='/admin' className='p-3 bg-white rounded-md mx-12 text-base font-bold shadow-md'>Admin Home Sector</Link>
-                <Outlet />
             </div>
 
             <table className='w-auto flex flex-col mt-20 justify-center px-40 mx-80'>

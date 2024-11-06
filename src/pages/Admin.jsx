@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // รับ props ที่มาจาก App มี state tasks , ฟังก์ชั่นฆาตกรโรคจิต , ฟังชั่นล้างโลก ส่วน onAddInfo เราส่งเป็น props จากหน้านี้ไปหน้า App นะที่มี ข้อมูล id ชื่อ นามสกุล ที่อยู่
 const Admin = ({ onAddInfo, tasks, onDelete, onDeleteAll }) => {
@@ -30,7 +30,6 @@ const Admin = ({ onAddInfo, tasks, onDelete, onDeleteAll }) => {
                 {/* Link 2 ตัวเหมือนเดิม มีทุกหน้า */}
                 <Link to='/user' className='p-3 bg-white rounded-md mx-12 text-base font-bold shadow-md'>User Home Sector</Link>
                 <Link to='/admin' className='p-3 bg-white rounded-md mx-12 text-base font-bold shadow-md'>Admin Home Sector</Link>
-                <Outlet />
             </div>
             {/* เมื่อมีการแจ้งเตือนมาจากปุ่ม submit ให้ไปเรียกใช้ ฟังก์ชั่น submit(ยำ) */}
             <form onSubmit={submit} className='flex text-center w-full justify-center mt-20'>
